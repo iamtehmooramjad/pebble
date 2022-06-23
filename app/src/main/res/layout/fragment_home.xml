@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f9f8f9"
+    android:layout_margin="14dp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:cardCornerRadius="2dp"
+        android:layout_margin="4dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Connect Your Pebble"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary" />
+
+                <ImageButton
+                    android:id="@+id/bt_toggle_text"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:tint="@color/colorPrimary"
+                    app:srcCompat="@drawable/ic_baseline_expand_more_24" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyt_expand_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Switch
+                    android:id="@+id/bluetoothSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Enable or Disable Bluetooth"
+                    android:layout_margin="14dp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+
+                <TextView
+                    android:id="@+id/connectTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Scan now"
+                    android:textSize="14sp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:letterSpacing="0.1"
+                    android:paddingStart="10dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"                            />
+
+
+                <ListView
+                    android:id="@+id/devicesListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/devicesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        />
+
+
+
+
+
+</LinearLayout>
